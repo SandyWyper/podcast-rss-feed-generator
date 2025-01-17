@@ -9,5 +9,6 @@ RUN apt-get update && apt-get install -y \
 COPY feed.py /user/bin/feed.py
 
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod 775 /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
